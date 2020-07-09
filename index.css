@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+
+ body,html{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+}
+header{
+  /* position: relative; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(./img/dog-background.jpg);
+    background-size: cover;
+    background-position: center;
+   
+} 
+#header{
+    width: 100%;
+    height:3em;
+      position: absolute;
+    display:flex;
+    justify-content: space-around;
+    
+}
+.logo{
+  line-height: 4px;
+ 
+}
+.logo p{
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'Modak', cursive;
+}
+.menu{
+    line-height: 2px;
+    display: flex;
+    list-style: none;
+    margin-top: 1.5em;
+    height: fit-content;
+}
+.menu li{
+    margin-right: 2em;
+    height: fit-content;
+    transition: all .6s;
+}
+
+.menu li a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    
+}
+.menu li:hover{
+   transform: scale(1.2);
+}
+.logo p:first-child{
+      margin-right: .2em ;
+      display: flex;
+      
+      color: rgb(251, 0, 0);
+}
+.logo p:last-child{
+    color: black;
+}
+.logo a{
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+} 
+.typing-main{
+    margin : 0 ;
+    position: absolute;
+    top: 30%;
+   width: 100%;
+   height:fit-content;
+ 
+   flex-direction: column;
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+#typing{
+    margin: 0 .3em 0 .3em;
+    max-width: 10em;
+    display: flex;
+     font-size: 1.6em;
+     font-weight: bold;
+     font-family: 'Lobster Two', cursive;
+     text-align: center;
+     color: #fff;
+}
+ .avatar-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin-bottom: 10px;
+}
+#Stocksy-img{
+    border: 2px solid black;
+    border-radius: 100%;
+    width: 6em;
+    height: 6em;
+    
+} 
+.fa-bars{
+    display: none !important;
+}
+.scroll-header{
+    position: fixed !important;
+    background-color: #ffff;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px){
+    .fa-bars{
+        position: absolute;
+        top: .4em;
+        right: .5em;
+        font-size: 2em;
+        color: black;
+        z-index: 3;
+        display: block !important;
+    }
+    .menu{
+        position: fixed ;
+        width: 100%;
+        height: 100% ;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        flex-direction:column ;
+        justify-content: center;
+        align-items: center;
+         transform: translateY(-100%);
+         transition:  .3s ease-in-out; 
+        
+    }
+    .menu a{
+        line-height: 100px;
+        
+    }
+    .active-menu{
+        transform: translateY(0%);
+        
+    }
+    .hidden{
+        z-index: -1 !important;
+    }
+    #typing{
+        left: 21%;
+    }
+}
