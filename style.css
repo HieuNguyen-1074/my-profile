@@ -528,8 +528,8 @@ body,html{
     color: #ffff;
     text-transform: capitalize;
 }
+
 #contcat {
-    display: flex;
     margin-top: 30px;
     justify-content: space-between;
     padding: 30px 100px 30px 100px;
@@ -559,4 +559,8 @@ body,html{
 .rate input[type =text],.rate input[type =email]{
     width: 200px;
     color: black !important;
+}
+@media only screen and (max-width:660){
+    #concat{
+    }
 }
