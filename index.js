@@ -34,6 +34,7 @@ function scrollSrceen() {
     window.addEventListener('scroll', (e) => {
         menuElementA.forEach(element => {
         if (window.scrollY > 50) {
+            console.log(element);
             element.classList.add('menu-a-scroll');
         }
         else {
@@ -46,7 +47,7 @@ function scrollSrceen() {
     const elementCss = document.querySelector('.css-span');
     const elementJs = document.querySelector('.js-span');
     window.addEventListener('scroll',()=>{
-        if(window.scrollY > 192){
+        if(window.scrollY > elementHtml.clientHeight){
             elementHtml.style.width = '70%'
             elementCss.style.width = '60%';
             elementJs.style.width ='50%';
@@ -73,12 +74,11 @@ function scrollSrceen() {
 
   let elementInfor = document.querySelectorAll('.infor');
         let elementViewMore =document.querySelectorAll('.view-infor');
-        console.log(elementViewMore);
+      
         elementInfor = [...elementInfor];
         elementViewMore =[...elementViewMore];
-        console.log(elementInfor);
+  
         elementInfor.forEach(element => {
-            console.log(window.scrollY)
              if (window.scrollY > 513) {
                 
                 element.classList.add('done-scroll');
